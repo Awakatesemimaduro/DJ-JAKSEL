@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <nav>
+        <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#biography">Biografía</a></li>
+            <li><a href="#radio">Reproductor</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de Inicio -->
+    <section id="home">
+        <h1>Bienvenidos a mi página de DJ</h1>
+        <p>¡Siente la música y disfruta de la mejor selección!</p>
+    </section>
+
+    <!-- Sección de Biografía -->
+    <section id="biography">
+        <h2>Sobre Mí</h2>
+        <p>¡Bienvenido a mi mundo de música! Soy un DJ apasionado por llevar la mejor experiencia auditiva a todos ustedes. Aquí les comparto algunas fotos de mis presentaciones.</p>
+    
+        <div class="bio-images">
+            <div class="bio-image">
+                <img src="img/1.png" alt="Foto 1">
+            </div>
+            <div class="bio-image">
+                <img src="img/2.jpeg" alt="Foto 2">
+            </div>
+            <div class="bio-image">
+                <img src="img/3.jpg" alt="Foto 3">
+            </div>
+            <div class="bio-image">
+                <img src="img/4.jpg" alt="Foto 4">
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="radio">
+        <h2>Escucha mi radio en vivo</h2>
+        <div class="custom-audio-player">
+            <h3>Reproductor</h3>
+            <!-- Reproductor Zeno.fm con el enlace correcto -->
+            <div class="audio-player-container">
+                <iframe src="https://stream.zeno.fm/unif1qzgdqbvv" width="100%" height="150" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contact">
+        <h2>Contacto</h2>
+        <div class="contact-info">
+            <p>¿Tienes alguna pregunta o quieres ponerte en contacto conmigo? ¡No dudes en enviarme un mensaje!</p>
+            <ul>
+                <li><strong>Correo electrónico:</strong> tuemail@dominio.com</li>
+                <li><strong>Teléfono:</strong> +123 456 7890</li>
+                <li><strong>Redes sociales:</strong>
+                    <ul>
+                        <li><a href="https://facebook.com/tu-perfil" target="_blank">Facebook</a></li>
+                        <li><a href="https://instagram.com/tu-perfil" target="_blank">Instagram</a></li>
+                        <li><a href="https://twitter.com/tu-perfil" target="_blank">Twitter</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="contact-form">
+            <h3>Envíame un mensaje</h3>
+            <form action="POST.php" method="POST">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+    
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+            <!-- Mensajes de éxito o error -->
+            <div class="success-message" style="display:none;">¡Mensaje enviado con éxito!</div>
+            <div class="error-message" style="display:none;">Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.</div>
+        </div>
+    </section>
+        
+    <footer>
+        <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
