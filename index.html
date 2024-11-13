@@ -63,7 +63,7 @@
         <div class="contact-info">
             <p>¿Tienes alguna pregunta o quieres ponerte en contacto conmigo? ¡No dudes en enviarme un mensaje!</p>
             <ul>
-                <li><strong>Correo electrónico:</strong> tuemail@dominio.com</li>
+                <li><strong>Correo electrónico:</strong> DJJakz@gmail.com</li>
                 <li><strong>Teléfono:</strong> +123 456 7890</li>
                 <li><strong>Redes sociales:</strong>
                     <ul>
@@ -74,30 +74,21 @@
                 </li>
             </ul>
         </div>
-    
-        <div class="contact-form">
-            <h3>Envíame un mensaje</h3>
-            <form action="POST.php" method="POST">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-    
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-    
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-    
-                <button type="submit">Enviar Mensaje</button>
-            </form>
-            <!-- Mensajes de éxito o error -->
-            <div class="success-message" style="display:none;">¡Mensaje enviado con éxito!</div>
-            <div class="error-message" style="display:none;">Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.</div>
-        </div>
-    </section>
-        
+            
     <footer>
         <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
     </footer>
 
 </body>
+<script>
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', function() {
+            link.classList.add('clicked');
+            setTimeout(() => {
+                link.classList.remove('clicked');
+            }, 200);
+        });
+    });
+</script>
+
 </html>
