@@ -44,13 +44,12 @@
             </div>
         </div>
     </section>
-    
 
+    <!-- Sección de Radio -->
     <section id="radio">
         <h2>Escucha mi radio en vivo</h2>
         <div class="custom-audio-player">
             <h3>Reproductor</h3>
-            <!-- Reproductor Zeno.fm con el enlace correcto -->
             <div class="audio-player-container">
                 <iframe src="https://stream.zeno.fm/unif1qzgdqbvv" width="100%" height="150" frameborder="0" scrolling="no"></iframe>
             </div>
@@ -74,25 +73,35 @@
                 </li>
             </ul>
         </div>
-            
+    </section>
+    
     <footer>
         <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
     </footer>
 
-</body>
-<script>
-    document.querySelectorAll('nav ul li a').forEach(link => {
-        link.addEventListener('click', function() {
-            link.classList.add('clicked');
-            setTimeout(() => {
-                link.classList.remove('clicked');
-            }, 200);
-        });
-    });
-</script>
-<div id="chat-container">
-    <div id="tlkio" data-channel="EnVivo" data-theme="theme--pop" style="width:300px;height:400px;"></div>
-</div>
-<script async src="https://tlk.io/embed.js" type="text/javascript"></script>
+    <!-- Botón para abrir el chat -->
+    <div id="chat-toggle" onclick="toggleChat()">💬 Chat en Vivo</div>
 
+    <!-- Contenedor del chat (ventana emergente) -->
+    <div id="chat-container">
+        <div id="close-chat" onclick="toggleChat()">✖</div>
+        <div id="tlkio" data-channel="EnVivo" data-theme="theme--pop" style="width:100%;height:100%;"></div>
+    </div>
+    
+    <!-- Script para el chat -->
+    <script async src="https://tlk.io/embed.js" type="text/javascript"></script>
+
+    <!-- JavaScript para alternar el chat -->
+    <script>
+        function toggleChat() {
+            var chatContainer = document.getElementById("chat-container");
+            if (chatContainer.style.display === "none" || chatContainer.style.display === "") {
+                chatContainer.style.display = "block";
+            } else {
+                chatContainer.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
 </html>
