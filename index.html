@@ -17,30 +17,37 @@
             <li><a href="#contact">Contacto</a></li>
         </ul>
     </nav>
+    <img src="https://github.com/Awakatesemimaduro/DJ-JAKSEL/blob/main/Build/portada%20de%20radio%20calidad%20alta%20.png?raw=true" alt="1000px" class="image-portada">
 
-    <!-- Sección de Inicio -->
+
     <section id="home">
-        <h1>Bienvenidos a mi página de DJ</h1>
-        <p>¡Siente la música y disfruta de la mejor selección!</p>
+        <div class="home-text">
+            <h1>Bienvenido a la jungla Radio Show</h1>
+            <p>¡Siente la música y disfruta de la mejor selección!</p>
+        </div>
     </section>
+    
 
     <!-- Sección de Biografía -->
     <section id="biography">
         <h2>Sobre Mí</h2>
-        <p>¡Bienvenido a mi mundo de música! Soy un DJ apasionado por llevar la mejor experiencia auditiva a todos ustedes. Aquí les comparto algunas fotos de mis presentaciones.</p>
+        <p>¡Bienvenido a la jungla Radio Show! Soy un DJ apasionado por llevar la mejor experiencia auditiva a todos ustedes. Aquí les comparto algunas fotos de mis presentaciones.</p>
     
         <div class="bio-images">
             <div class="bio-image">
-                <img src="https://github.com/Awakatesemimaduro/DJ-JAKSEL/blob/main/Build/1.png?raw=true" alt="Foto 1">
+                <img src="https://github.com/Awakatesemimaduro/DJ-JAKSEL/blob/main/Build/1.jpeg?raw=true" alt="Foto 1">
             </div>
             <div class="bio-image">
                 <img src="https://github.com/Awakatesemimaduro/DJ-JAKSEL/blob/main/Build/2.jpeg?raw=true" alt="Foto 2">
             </div>
             <div class="bio-image">
-                <img src="https://github.com/Awakatesemimaduro/DJ-JAKSEL/blob/main/Build/3.jpg?raw=true" alt="Foto 3">
+                <img src="https://github.com/Awakatesemimaduro/DJ-JAKSEL/blob/main/Build/3.jpeg?raw=true" alt="Foto 3">
             </div>
             <div class="bio-image">
-                <img src="https://github.com/Awakatesemimaduro/DJ-JAKSEL/blob/main/Build/4.jpg?raw=true" alt="Foto 4">
+                <img src="https://github.com/Awakatesemimaduro/DJ-JAKSEL/blob/main/Build/4.jpeg?raw=true" alt="Foto 4">
+            </div>
+            <div class="bio-image">
+                <img src="https://github.com/Awakatesemimaduro/DJ-JAKSEL/blob/main/Build/5.jpeg?raw=true" alt="Foto 5">
             </div>
         </div>
     </section>
@@ -57,23 +64,25 @@
     </section>
 
     <!-- Sección de Contacto -->
-    <section id="contact">
-        <h2>Contacto</h2>
-        <div class="contact-info">
-            <p>¿Tienes alguna pregunta o quieres ponerte en contacto conmigo? ¡No dudes en enviarme un mensaje!</p>
-            <ul>
-                <li><strong>Correo electrónico:</strong> DJJakz@gmail.com</li>
-                <li><strong>Teléfono:</strong> +123 456 7890</li>
-                <li><strong>Redes sociales:</strong>
-                    <ul>
-                        <li><a href="https://facebook.com/tu-perfil" target="_blank">Facebook</a></li>
-                        <li><a href="https://instagram.com/tu-perfil" target="_blank">Instagram</a></li>
-                        <li><a href="https://twitter.com/tu-perfil" target="_blank">Twitter</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </section>
+<section id="contact">
+    <h2>Contacto</h2>
+    <div class="contact-info">
+        <p>¿Tienes alguna pregunta o quieres ponerte en contacto conmigo? ¡No dudes en enviarme un mensaje!</p>
+        <ul>
+            <li><strong>Correo electrónico:</strong> DJJakz@gmail.com</li>
+            <li><strong>Teléfono:</strong> +123 456 7890</li>
+            <li><strong>Redes sociales:</strong>
+                <ul class="social-media-links">
+                    <li><a href="https://facebook.com/tu-perfil" target="_blank" class="social-icon"><img src="https://github.com/Awakatesemimaduro/DJ-JAKSEL/blob/main/Build/4102573_applications_facebook_media_social_icon.png?raw=true" alt="Facebook" class="social-icon-img"> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/dj_jaksel_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-icon"><img src="https://github.com/Awakatesemimaduro/DJ-JAKSEL/blob/main/Build/6929237_instagram_icon.png?raw=true" alt="Instagram" class="social-icon-img"> Instagram</a></li>
+                    <li><a href="http://www.youtube.com/@djjaksel1524" target="_blank" class="social-icon"><img src="https://github.com/Awakatesemimaduro/DJ-JAKSEL/blob/main/Build/317714_video_youtube_icon.png?raw=true" alt="YouTube" class="social-icon-img"> YouTube</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
     
     <footer>
         <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
@@ -102,6 +111,28 @@
             }
         }
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const homeSection = document.querySelector("#home");
 
+    // Configuración del Intersection Observer
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    homeSection.classList.add("visible");
+                    homeSection.classList.remove("hidden");
+                }
+            });
+        },
+        {
+            threshold: 0.1, // Activa cuando el 10% del elemento es visible
+        }
+    );
+
+    observer.observe(homeSection);
+});
+
+    </script>
 </body>
 </html>
